@@ -60,11 +60,16 @@ h1, h2 {
 
 .video-container {
   position: relative;
+  margin-left: -4rem;
+  margin-right: -4rem;
+  height: 480px;
+  overflow: hidden;
 }
 
 #bgvid {
   width: 100%;
-  height: 100%;
+  /*height: 100%;*/
+  transform: translate(0, -20%);
   z-index: 1;
 }
 
@@ -73,10 +78,15 @@ h1, h2 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 99.5%;
+  /*height: 99.5%;*/
+  height: 100%;
+
+  /*background-color: rgba(0,0,0,0.5);*/
   /*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAHUlEQVQYV2NkwAEYiZH4D1UEVoysA6cEiqk47QAAmZMCB/g/V3sAAAAASUVORK5CYII=);*/
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAL0lEQVQoU2NkIAzOMDAwmDASVgdRgawQrBOXRrJMxGYY3BaqmQi3Bd1EnB6ivtUA+lYEC0598BcAAAAASUVORK5CYII=);
+  /*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAL0lEQVQoU2NkIAzOMDAwmDASVgdRgawQrBOXRrJMxGYY3BaqmQi3Bd1EnB6ivtUA+lYEC0598BcAAAAASUVORK5CYII=);*/
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAATklEQVQoU2NkYGAwZmBgOMuAACA+CKCIMSIpADGRNaEYgKwQ3WQUjTCF6CYhWw2WAynEpgjmIpg7jUlSiM0TWK2GWUOUZ7ApxggeogIcABHJFtftKVfJAAAAAElFTkSuQmCC);
   z-index: 2;
+
 }
 
 .capabilities {
