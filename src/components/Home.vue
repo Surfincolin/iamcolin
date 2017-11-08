@@ -2,16 +2,15 @@
   <div class="home">
     <h2>Welcome, My name is Colin Wageman. I'm a creative developer who likes making interactive experiences. With a diverse background, I excel in looking at the bigger picture and determining the most efficient approach to situations.</h2>
     <div class="video-container">
-      <!-- <a href="http://placeholder.com"><img src="http://via.placeholder.com/854x480?text=Video+Reel"></a> -->
-      <iframe src="https://player.vimeo.com/video/225743129" width="854" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      <!-- <video width="854" height="480" controls>
-        <source src="static/code-reel-v1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video> -->
+      <div class="video-container-inner">
+
+      <iframe src="https://player.vimeo.com/video/225743129" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+      </div>
     </div>
     <div class="standard-content">
       <h3>A Brief History</h3>
-      <p>After deciding traditional engineering wasn't for me I got into video production. As live streaming and webcasts became popular I started a live stream company. Over time I began developing custom servers and CDNs through AWS for productions. I ended up really enjoying the development and coding side of things, so I decided to pursue a career in software development. From there I worked with Sosolimited as a creative coder, until recently. Now I am freelancing and looking for opportunities to develop interactive applications and experiences.</p> 
+      <p>After deciding traditional engineering wasn't for me I got into video production. As live streaming and webcasts became popular I started a live stream company. Over time I began developing custom servers and CDNs through AWS for productions. I ended up really enjoying the development and coding side of things, so I decided to pursue a career in software development. From there I worked with Sosolimited as a creative coder, until recently. Now I am freelancing and looking for opportunities to develop interactive applications and experiences.</p>
       <h3 class="">Capabilities</h3>
       <ul class="capabilities">
         <li>C++</li>
@@ -50,8 +49,7 @@ export default {
 h1, h2 {
   font-weight: 300;
   line-height: 2.5rem;
-  padding-top: 1rem;
-  padding-bottom: 3.5rem;
+  padding: 1rem 0 3.5rem;
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 0.4px;
   font-size: 1.9rem;
@@ -75,6 +73,39 @@ h1, h2 {
   padding-top: 2rem;
 }
 
+.video-container iframe {
+    /*position: absolute;*/
+    /*top:0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+}
+
+.video-container {
+  position: relative;
+  max-width: 854px;
+  margin: 0 auto;
+}
+
+.video-container-inner {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.video-container-inner iframe,
+.video-container-inner object,
+.video-container-inner embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /*ul {
   list-style-type: none;
   padding: 0;
@@ -88,4 +119,33 @@ li {
 a {
   color: #42b983;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    h1, h2 {
+      letter-spacing: 0.2px;
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+      padding: 2rem 0;
+    }
+
+    .capabilities {
+      /*list-style-type: circle;*/
+      /*list-style-position: inside;*/
+      -webkit-columns: 100px 2; /* Chrome, Safari, Opera */
+      -moz-columns: 100px 2; /* Firefox */
+      columns: 100px 2;
+      line-height: 1.2rem;
+    }
+
+    .capabilities li {
+      padding-bottom: 0.6rem;
+    }
+
+    .video-container {
+      padding-bottom: 1rem;
+    }
+
+}
+
 </style>

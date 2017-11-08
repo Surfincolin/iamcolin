@@ -18,10 +18,10 @@
 export default {
   name: 'connect',
   data () {
-  	 	
+
 
     return {
-      
+
     }
   },
   methods: {
@@ -29,7 +29,7 @@ export default {
   mounted: function () {
 
   	/// --------------------------
-  	///         p5.js Code      
+  	///         p5.js Code
   	/// --------------------------
   	function startSketch() {
   	    var sketch = function(p) {
@@ -140,6 +140,41 @@ a {
 	/*text-align: center;*/
 	margin: 0 auto;
 	text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+  h3 {
+    padding: 1rem;
+  }
+
+  .connect-container {
+    display: block;
+  }
+
+  .connect-container div {
+    width: 100%;
+  }
+
+  a {
+    text-align: center;
+    font-size: 1.6rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin: 0 auto;
+    text-decoration: underline;
+    display: block;
+  }
+
+ /* #funCanvas {
+    width: 25%;
+    height: 400px;
+
+    margin: 0 auto;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+  }*/
 }
 
 </style>
