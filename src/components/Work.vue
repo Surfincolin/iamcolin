@@ -88,7 +88,7 @@ export default {
   /*width: 60%;*/
   /*height: 100%;*/
   line-height: 0;
-  
+
 }
 
 .project-card-info-container {
@@ -98,7 +98,7 @@ export default {
 
 }
 
-.project-card-info {  
+.project-card-info {
   padding: 1.5rem;
   /*text-align: right;*/
   /*z-index: 1;*/
@@ -180,6 +180,47 @@ export default {
 
 .project-card-info-container.right h2:after {
 	margin-right: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .project-card-info-container {
+      padding: 0.5rem;
+      width: 60%;
+    }
+
+    .project-card-info {
+      padding: 0.5rem;
+    }
+
+    .project-card h2 {
+      font-size: 1.4rem;
+      padding-bottom: 0.5rem;
+      padding-top: 0;
+    }
+
+    .project-card h2:after {
+         /*background: none repeat scroll 0 0 #ffffff;*/
+         bottom: -0.25rem;
+         /*margin-left: auto;*/
+         /*content: "";*/
+         /*display: block;*/
+         /*height: 1px;*/
+         /*position: relative;*/
+         width: 80px;
+     }
+
+    .project-card-img {
+      overflow: hidden;
+    }
+
+    .project-card img {
+      width: 150%;
+      margin: 0 -25%;
+      display: block;
+    }
+
+
 }
 
 </style>

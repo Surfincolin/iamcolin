@@ -11,7 +11,9 @@
 	  	</div>
   	</div>
   	<div v-if="project.video != ''" class="video-container">
-      <iframe :src="videoSrc()" width="854" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <div class="video-container-inner">
+        <iframe :src="videoSrc()" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
     </div>
   	<div class="photo-grid">
 	  	<div class="photo-container" v-for="photo in project.photos">
@@ -32,7 +34,7 @@ export default {
   name: 'project',
   data () {
   	var pId = this.$route.params.projectId
-  	
+
 
     return {
       project: projects.find((element) => { return element.projectId === pId }),
@@ -118,6 +120,54 @@ h3 {
 
 .role h4 {
 	text-align: left;
+}
+
+.video-container {
+  position: relative;
+  max-width: 854px;
+  margin: 0 auto;
+}
+
+.video-container-inner {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.video-container-inner iframe,
+.video-container-inner object,
+.video-container-inner embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+  .project-top-container {
+    display: block;
+  }
+
+  .description, .role {
+    flex: 1 1 100%;
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+
+  .video-container {
+    padding-bottom: 1rem;
+  }
+
+  .photo-container {
+    width: 100%;
+  }
+
 }
 
 </style>

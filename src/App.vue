@@ -37,7 +37,7 @@
             </ul>
           </div>
         </div>
-        <h5 class="footnote">© 2017 Colin Wageman. All rights reserved.</h5>
+        <h5 class="footnote">© 2017 Colin Wageman. <br class="mobile"/>All rights reserved.</h5>
       </div>
     </div>
   </div>
@@ -66,7 +66,7 @@ export default {
 
 /* RESET */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -80,8 +80,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -92,7 +92,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -194,11 +194,11 @@ h1, h2, h3, h4, h5 {
   text-align: center;
 }
 
-h1 { font-size: 2.5rem; padding-bottom: 2rem; }
-h2 { font-size: 2.2rem; padding-bottom: 1.5rem; }
-h3 { font-size: 1.9rem; padding-bottom: 2rem; }
-h4 { font-size: 1.4rem; padding-bottom: 0.5rem; }
-h5 { font-size: 1.0rem; padding-bottom: 0.25rem; }
+h1 { font-size: 2.5rem; padding: 2rem 0; }
+h2 { font-size: 2.2rem; padding: 1.5rem 0; }
+h3 { font-size: 1.9rem; padding: 2rem 0; }
+h4 { font-size: 1.4rem; padding: 0.5rem 0; }
+h5 { font-size: 1.0rem; padding: 0.25rem 0; line-height: 1.4rem; }
 
 p {
     font-size: 1.1rem;
@@ -206,6 +206,10 @@ p {
     font-weight: lighter;
     padding-bottom: 2rem;
     letter-spacing: 0.4px;
+}
+
+.mobile {
+  display: none;
 }
 
 .master-container {
@@ -300,6 +304,66 @@ hr {
 .footnote {
   font-weight: normal;
   text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    p {
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+        padding-bottom: 0;
+    }
+
+    .mobile {
+      display: inline;
+    }
+
+    .master-container {
+      /*max-width: 80rem;*/
+    }
+
+    .header-container {
+      min-height: 6rem;
+      /*background: #98FBFF;*/
+      /*color: #32CCA6;*/
+      display: flex;
+      padding: 1rem 1rem 0;
+      align-items: center;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .logo-container {
+      flex: 0 1 0;
+    }
+
+    .menu li {
+      padding: 0;
+      padding-left: 0.75rem;
+      font-size: 1.6rem;
+    }
+
+    .content-container {
+      padding: 0.5rem 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+  /* Small mobile, iPhone 5 */
+  .menu ul {
+    display: block;
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    /*align-items: center;*/
+    /*justify-content: flex-end;*/
+    text-align: right;
+  }
+
+  .menu li {
+    /*padding: 20px;*/
+    /*font-size: 1.3rem;*/
+    margin-bottom: 0.25rem;
+  }
 }
 
 </style>
