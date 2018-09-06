@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h2>Welcome, My name is Colin Wageman. I'm a creative developer who likes making interactive experiences. With a diverse background, I excel in looking at the bigger picture and determining the most efficient approach to situations.</h2>
+    <h2>Welcome, My name is Colin Wageman. I'm a software developer who likes making interactive experiences. With a diverse background, I excel in looking at the bigger picture and determining the most efficient approach to situations.</h2>
     <div class="video-container">
       <div class="video-container-inner">
 
@@ -13,21 +13,67 @@
       <p>After deciding traditional engineering wasn't for me I got into video production. As live streaming and webcasts became popular I started a live stream company. Over time I began developing custom servers and CDNs through AWS for productions. I ended up really enjoying the development and coding side of things, so I decided to pursue a career in software development. From there I worked with Sosolimited as a creative coder, until recently. Now I am freelancing and looking for opportunities to develop interactive applications and experiences.</p>
       <h3 class="">Capabilities</h3>
       <ul class="capabilities">
+        <!-- <li>After Effects</li>
+        <li>Agile</li>
+        <li>Assembly</li>
+        <li>AWS</li>
         <li>C++</li>
         <li>Cinder</li>
-        <li>Scope/Time Understanding</li>
-        <li>Swift</li>
-        <li>tvOS/iOS</li>
-        <li>Javascript</li>
+        <li>CSS3</li>
+        <li>D3.js</li>
+        <li>DMX Lighting Protocols</li>
+        <li>Firebase</li>
+        <li>Git</li>
+        <li>HTML5</li>
+        <li>Java</li>
+        <li>Javascript ES6</li>
+        <li>Linux</li>
+        <li>MongoDB</li>
         <li>Node.js</li>
         <li>Object Oriented Programming</li>
-        <li>Vue.js</li>
-        <li>D3.js</li>
-        <li>AWS</li>
-        <li>Linux</li>
+        <li>Openframeworks</li>
+        <li>PHP</li>
+        <li>React.js</li>
+        <li>Scope/Time Understanding</li>
+        <li>Scrum</li>
+        <li>SQLite</li>
+        <li>Swift</li>
         <li>Technical Production</li>
-        <li>DMX Lighting Protocols</li>
+        <li>tvOS/iOS</li>
+        <li>Vue.js</li>
+        <li>XCode/Visual Studio/Code::Blocks</li> -->
+
         <li>After Effects</li>
+        <li>AWS</li>
+        <li>CSS3</li>
+        <li>Firebase</li>
+        <li>Java</li>
+        <li>MongoDB</li>
+        <li>Openframeworks</li>
+        <li>Scope/Time Understanding</li>
+        <li>Swift</li>
+        <li>Vue.js</li>
+
+        <li>Agile</li>
+        <li>C++</li>
+        <li>D3.js</li>
+        <li>Git</li>
+        <li>Javascript ES6</li>
+        <li>Node.js</li>
+        <li>PHP</li>
+        <li>Scrum</li>
+        <li>Technical Production</li>
+        <li>XCode/Visual Studio/Code::Blocks</li>
+
+        <li>Assembly</li>
+        <li>Cinder</li>
+        <li>DMX Lighting Protocols</li>
+        <li>HTML5</li>
+        <li>Linux</li>
+        <li>Object Oriented Programming</li>
+        <li>React.js</li>
+        <li>SQLite</li>
+        <li>tvOS/iOS</li>
       </ul>
     </div>
   </div>
