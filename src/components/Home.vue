@@ -10,10 +10,10 @@
     </div>
     <div class="standard-content">
       <h3>A Brief History</h3>
-      <p>After deciding traditional engineering wasn't for me I got into video production. As live streaming and webcasts became popular I started a live stream company. Over time I began developing custom servers and CDNs through AWS for productions. I ended up really enjoying the development and coding side of things, so I decided to pursue a career in software development. From there I worked with Sosolimited as a creative coder, until recently. Now I am freelancing and looking for opportunities to develop interactive applications and experiences.</p>
+      <p>After deciding traditional engineering wasn't for me I got into video production. As live streaming and webcasts became popular I started a live stream company. Over time I began developing custom servers and CDNs through AWS for productions. I ended up really enjoying the development and coding side of things, so I decided to pursue a career in software development. From there I worked with Sosolimited as a creative coder, until recently. Currently, I am looking for opportunities to apply my skills and grow further in software development. Specifically, I have an interest in interactive and control applications.</p>
       <h3 class="">Capabilities</h3>
       <ul class="capabilities">
-        <!-- <li>After Effects</li>
+        <li>After Effects</li>
         <li>Agile</li>
         <li>Assembly</li>
         <li>AWS</li>
@@ -41,9 +41,9 @@
         <li>Technical Production</li>
         <li>tvOS/iOS</li>
         <li>Vue.js</li>
-        <li>XCode/Visual Studio/Code::Blocks</li> -->
+        <li>XCode/Visual Studio/Code::Blocks</li>
 
-        <li>After Effects</li>
+        <!-- <li>After Effects</li>
         <li>AWS</li>
         <li>CSS3</li>
         <li>Firebase</li>
@@ -73,7 +73,7 @@
         <li>Object Oriented Programming</li>
         <li>React.js</li>
         <li>SQLite</li>
-        <li>tvOS/iOS</li>
+        <li>tvOS/iOS</li> -->
       </ul>
     </div>
   </div>

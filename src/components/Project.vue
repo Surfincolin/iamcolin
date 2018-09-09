@@ -3,11 +3,16 @@
   	<h3>{{ project.title }}</h3>
   	<div class="project-top-container">
 	  	<div class="description">
+        <!-- <h4 class="top">Summary:</h4> -->
 		  	<p>{{ project.description }}</p>
 	  	</div>
 	  	<div class="role">
-	  		<h4>Role:</h4>
-		  	<p>{{ project.role }}</p>
+	  		<h4 class="top">Role:</h4>
+		  	<p class="small-bottom-padding">{{ project.role }}</p>
+        <div class="tools">
+          <h4>Tools:</h4>
+          <p>{{ project.tools.join(", ") }}</p>
+        </div>
 	  	</div>
   	</div>
   	<div v-if="project.video != ''" class="video-container">
@@ -76,6 +81,10 @@ export default {
 	padding-right: 120px;
 }
 
+.description p {
+  font-size: 1.3rem;
+}
+
 .project-top-container div:last-of-type {
 	padding-right: 0;
 }
@@ -118,8 +127,22 @@ h3 {
 	text-align: left;
 }
 
-.role h4 {
+.role h4, .role h5, .description h4 {
 	text-align: left;
+}
+
+.top {
+  padding-top: 0;
+}
+
+.role .bolder, .role h5 {
+  font-size: 1.2rem;
+  /*font-weight: bold;*/
+  /*font-family: 'Cormorant Garamond', serif;*/
+}
+
+.small-bottom-padding {
+  padding-bottom: 1rem;
 }
 
 .video-container {
