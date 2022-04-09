@@ -115,5 +115,18 @@
 		"videoType": "vimeo",
 		"projectId": "behavioral-health-visualization",
 		"intro": "Web based interactive dataviz application."
+	},
+	{
+		"title": "Life",
+		"description": "Enjoying life!",
+		"client": "My family and I",
+		"role": "Dad, Husband, Brother, Son, Climber, Cyclist",
+		"tools": ["Coffee", "Bread", "Beer"],
+		"thumbnail": "life",
+		"photos": ["life-1", "life-2", "life-3"],
+		"video": "",
+		"videoType": "vimeo",
+		"projectId": "life",
+		"intro": "I don't always sit at a computer."
 	}
 ]
