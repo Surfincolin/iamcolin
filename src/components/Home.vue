@@ -1,11 +1,29 @@
 <template>
   <div class="home">
-    <h2>Welcome, My name is Colin Wageman. I'm a software developer who likes making interactive experiences. With a diverse background, I excel in looking at the bigger picture and determining the most efficient approach to situations.</h2>
-    <div class="video-container">
-      <div class="video-container-inner">
+    <h2>Welcome, My name is Colin Wageman. I'm a software developer who likes making interactive experiences, working with embedded systems, processing signals, and using data for more than marketing. With a diverse background, I excel in looking at the bigger picture and determining the most efficient approach to projects and problems. At the same time I like getting into the nitty-gritty, even down to how circuits are built.</h2>
 
-      <iframe src="https://player.vimeo.com/video/225743129" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
+    <div id='gallery'>
+      <div id='gallery-scroller' data-current="0">
+        <img src="/static/images/gallery/bci-1@0.5x.jpg"> 
+        <img src="/static/images/gallery/bci-2@0.5x.jpg"> 
+        <img src="/static/images/gallery/bci-3@0.5x.jpg"> 
+        <img src="/static/images/gallery/bci-4@0.5x.jpg"> 
+        <img src="/static/images/gallery/BHZ-2@0.5x.jpg"> 
+        <img src="/static/images/gallery/biomed-2@0.5x.jpg"> 
+        <img src="/static/images/gallery/converge-1@0.5x.jpg"> 
+        <img src="/static/images/gallery/converge-4@0.5x.jpg"> 
+        <img src="/static/images/gallery/Eventide-2@0.5x.jpg"> 
+        <img src="/static/images/gallery/IC-1@0.5x.jpg"> 
+        <img src="/static/images/gallery/Jabil-5@0.5x.jpg"> 
+        <img src="/static/images/gallery/life-1@0.5x.jpg"> 
+        <img src="/static/images/gallery/life-2@0.5x.jpg"> 
+        <img src="/static/images/gallery/life-3@0.5x.jpg"> 
+        <img src="/static/images/gallery/Miraj-5@0.5x.jpg"> 
+        <img src="/static/images/gallery/qronicles-2@0.5x.jpg"> 
+        <img src="/static/images/gallery/toaster-1@0.5x.jpg"> 
+        <img src="/static/images/gallery/toaster-2@0.5x.jpg"> 
+        <img src="/static/images/gallery/toaster-3@0.5x.jpg"> 
+        <img src="/static/images/gallery/WGN-4@0.5x.jpg"> 
       </div>
     </div>
     <div class="standard-content">
@@ -43,37 +61,6 @@
         <li>Vue.js</li>
         <li>XCode/Visual Studio/Code::Blocks</li>
 
-        <!-- <li>After Effects</li>
-        <li>AWS</li>
-        <li>CSS3</li>
-        <li>Firebase</li>
-        <li>Java</li>
-        <li>MongoDB</li>
-        <li>Openframeworks</li>
-        <li>Scope/Time Understanding</li>
-        <li>Swift</li>
-        <li>Vue.js</li>
-
-        <li>Agile</li>
-        <li>C++</li>
-        <li>D3.js</li>
-        <li>Git</li>
-        <li>Javascript ES6</li>
-        <li>Node.js</li>
-        <li>PHP</li>
-        <li>Scrum</li>
-        <li>Technical Production</li>
-        <li>XCode/Visual Studio/Code::Blocks</li>
-
-        <li>Assembly</li>
-        <li>Cinder</li>
-        <li>DMX Lighting Protocols</li>
-        <li>HTML5</li>
-        <li>Linux</li>
-        <li>Object Oriented Programming</li>
-        <li>React.js</li>
-        <li>SQLite</li>
-        <li>tvOS/iOS</li> -->
       </ul>
     </div>
   </div>
@@ -86,12 +73,66 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted: function() {
+    document.addEventListener("DOMContentLoaded", function() {
+      var gallery = document.getElementById('gallery');
+      var scr = document.getElementById('gallery-scroller');
+
+      var end = scr.scrollWidth - gallery.offsetWidth;
+      var scrollTimer;
+      var stopTimer;
+
+      function galleryScroll(amount = 1) {
+        if (gallery.scrollLeft == end) {
+          amount = -1
+        } else if (gallery.scrollLeft == 0) {
+          amount = 1
+        }
+        gallery.scrollBy(amount,0);
+        scrollTimer = setTimeout(() => { galleryScroll(amount) }, 8);
+      }
+      
+      function stopScroll() {
+        if (stopTimer != undefined) {
+          clearTimeout(stopTimer);
+        }
+        clearTimeout(scrollTimer);
+        stopTimer = setTimeout(galleryScroll, 3000);
+      }
+
+      galleryScroll();
+      gallery.addEventListener('touchstart', stopScroll);
+      gallery.addEventListener('mouseover', stopScroll);
+      
+    });
+
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+#gallery {
+  /*border: 1px solid #000000;*/
+  max-width: 100%;
+  max-height: 300px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  
+}
+
+#gallery-scroller {
+  width: 5700px;
+}
+
+#gallery-scroller img {
+  display: inline-block; 
+  float: left;
+  width: 300px;
+}
+
 h1, h2 {
   font-weight: 300;
   line-height: 2.5rem;
