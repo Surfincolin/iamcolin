@@ -1,59 +1,40 @@
 <template>
   <div class="home">
-    <h2>Welcome, My name is Colin Wageman. I'm a software developer who likes making interactive experiences, working with embedded systems, processing signals, and using data for more than marketing. With a diverse background, I excel in looking at the bigger picture and determining the most efficient approach to projects and problems. At the same time I like getting into the nitty-gritty, even down to how circuits are built.</h2>
+    <h2>Welcome! I'm Colin Wageman and I am a software developer specializing in interactive experiences, embedded systems, signal processing, and using data for more than marketing. With a diverse background, I can look at the bigger picture and determining the most efficient approach to projects and problems. I also enjoy getting into the nitty-gritty, even down to how circuits are built.</h2>
 
     <div id='gallery'>
       <div id='gallery-scroller' data-current="0">
-        <img src="/static/images/gallery/bci-1@0.5x.jpg"> 
-        <img src="/static/images/gallery/bci-2@0.5x.jpg"> 
-        <img src="/static/images/gallery/bci-3@0.5x.jpg"> 
-        <img src="/static/images/gallery/bci-4@0.5x.jpg"> 
-        <img src="/static/images/gallery/BHZ-2@0.5x.jpg"> 
-        <img src="/static/images/gallery/biomed-2@0.5x.jpg"> 
-        <img src="/static/images/gallery/converge-1@0.5x.jpg"> 
-        <img src="/static/images/gallery/converge-4@0.5x.jpg"> 
-        <img src="/static/images/gallery/Eventide-2@0.5x.jpg"> 
-        <img src="/static/images/gallery/IC-1@0.5x.jpg"> 
-        <img src="/static/images/gallery/Jabil-5@0.5x.jpg"> 
-        <img src="/static/images/gallery/life-1@0.5x.jpg"> 
-        <img src="/static/images/gallery/life-2@0.5x.jpg"> 
-        <img src="/static/images/gallery/life-3@0.5x.jpg"> 
-        <img src="/static/images/gallery/Miraj-5@0.5x.jpg"> 
-        <img src="/static/images/gallery/qronicles-2@0.5x.jpg"> 
-        <img src="/static/images/gallery/toaster-1@0.5x.jpg"> 
-        <img src="/static/images/gallery/toaster-2@0.5x.jpg"> 
-        <img src="/static/images/gallery/toaster-3@0.5x.jpg"> 
-        <img src="/static/images/gallery/WGN-4@0.5x.jpg"> 
+        <router-link v-for="photo in gallery" :key="photo.imgFile" :to="{ name: 'Project', params: { projectId: photo.projectId }}" >
+          <img :src="imgBase + photo.imgFile + suffix">
+        </router-link>
       </div>
     </div>
     <div class="standard-content">
       <h3>A Brief History</h3>
-      <p>After deciding traditional engineering wasn't for me I got into video production. As live streaming and webcasts became popular I started a live stream company. Over time I began developing custom servers and CDNs through AWS for productions. I ended up really enjoying the development and coding side of things, so I decided to pursue a career in software development. From there I worked with Sosolimited as a creative coder, until recently. Currently, I am looking for opportunities to apply my skills and grow further in software development. Specifically, I have an interest in interactive and control applications.</p>
+      <p>I started my studies in engineering but shortly transitioned into video production. As live streaming and webcasts became popular I started a live streaming company. Over time, I began developing custom servers and content distribution networks through AWS for live broadcasts. I really enjoyed coding and application development, so I decided to pursue a career in software development. From there I worked with Sosolimited, a design and technology firm, as a creative coder. I also worked as a software developer for the agency MJD Interactive. I wanted to expand my knowledge further so I went to UC San Diego and studied cognition, data science, machine learning, and brain computer interfaces. Currently, I enjoy new opportunities to help other while utilizing my skill set.</p>
       <h3 class="">Capabilities</h3>
       <ul class="capabilities">
         <li>After Effects</li>
-        <li>Agile</li>
-        <li>Assembly</li>
         <li>AWS</li>
         <li>C++</li>
         <li>Cinder</li>
         <li>CSS3</li>
         <li>D3.js</li>
-        <li>DMX Lighting Protocols</li>
-        <li>Firebase</li>
+        <li>Data Analysis</li>
         <li>Git</li>
         <li>HTML5</li>
         <li>Java</li>
-        <li>Javascript ES6</li>
+        <li>Javascript</li>
         <li>Linux</li>
+        <li>Machine Learning</li>
+        <li>OpenGl</li>
         <li>MongoDB</li>
         <li>Node.js</li>
         <li>Object Oriented Programming</li>
         <li>Openframeworks</li>
-        <li>PHP</li>
+        <li>Python</li>
         <li>React.js</li>
-        <li>Scope/Time Understanding</li>
-        <li>Scrum</li>
+        <li>Signal Processing</li>
         <li>SQLite</li>
         <li>Swift</li>
         <li>Technical Production</li>
@@ -71,41 +52,69 @@ export default {
   name: 'home',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      imgBase: '/static/images/gallery/',
+      suffix: '@0.5x.jpg',
+      gallery: [
+        {imgFile: 'BHZ-2', projectId: 'behavioral-health-visualization'}, 
+        {imgFile: 'bci-1', projectId: 'bci'}, 
+        {imgFile: 'converge-1', projectId: 'convergence'}, 
+        {imgFile: 'biomed-2', projectId: 'biomed-reality'}, 
+        {imgFile: 'toaster-3', projectId: 'toaster'}, 
+        {imgFile: 'bci-2', projectId: 'bci'}, 
+        {imgFile: 'Eventide-2', projectId: 'eventide'}, 
+        {imgFile: 'converge-4', projectId: 'convergence'}, 
+        {imgFile: 'bci-3', projectId: 'bci'}, 
+        {imgFile: 'toaster-1', projectId: 'toaster'}, 
+        {imgFile: 'life-1', projectId: 'life'}, 
+        {imgFile: 'IC-1',  projectId: 'inflorescent-crescendo'}, 
+        {imgFile: 'Jabil-5', projectId: 'jabil-bluesky-center'}, 
+        {imgFile: 'life-2', projectId: 'life'}, 
+        {imgFile: 'Miraj-5', projectId: 'miraj'}, 
+        {imgFile: 'life-3', projectId: 'life'}, 
+        {imgFile: 'toaster-2', projectId: 'toaster'}, 
+        {imgFile: 'qronicles-2', projectId: 'qronicles'}, 
+        {imgFile: 'bci-4', projectId: 'bci'}, 
+        {imgFile: 'WGN-4', projectId: 'whos-got-next'}, 
+      ]
     }
   },
   mounted: function() {
-    document.addEventListener("DOMContentLoaded", function() {
-      var gallery = document.getElementById('gallery');
-      var scr = document.getElementById('gallery-scroller');
+    var gallery = document.getElementById('gallery');
+    
+    var scr = document.getElementById('gallery-scroller');
 
-      var end = scr.scrollWidth - gallery.offsetWidth;
-      var scrollTimer;
-      var stopTimer;
+    var end = scr.scrollWidth - gallery.offsetWidth;
+    var scrollTimer;
+    var stopTimer;
 
-      function galleryScroll(amount = 1) {
-        if (gallery.scrollLeft == end) {
-          amount = -1
-        } else if (gallery.scrollLeft == 0) {
-          amount = 1
-        }
-        gallery.scrollBy(amount,0);
-        scrollTimer = setTimeout(() => { galleryScroll(amount) }, 8);
+    function galleryScroll(amount = 1) {
+      var delay = 8; //ms
+      if (gallery.scrollLeft == end) {
+        amount = -1
+        delay = 3000; // hold at end for 3 sec
+      } else if (gallery.scrollLeft == 0) {
+        amount = 1
+        delay = 3000; // hold at end for 3 sec
       }
-      
-      function stopScroll() {
-        if (stopTimer != undefined) {
-          clearTimeout(stopTimer);
-        }
-        clearTimeout(scrollTimer);
-        stopTimer = setTimeout(galleryScroll, 3000);
+      gallery.scrollBy(amount,0);
+      scrollTimer = setTimeout(() => { galleryScroll(amount) }, delay);
+    }
+    
+    function stopScroll() {
+      if (stopTimer != undefined) {
+        clearTimeout(stopTimer);
       }
+      clearTimeout(scrollTimer);
+      stopTimer = setTimeout(galleryScroll, 3000);
+    }
 
+    // fixed bug where initial delay happened twice
+    scrollTimer = setTimeout(() => {
+      gallery.scrollBy(2,0);
       galleryScroll();
-      gallery.addEventListener('touchstart', stopScroll);
-      gallery.addEventListener('mouseover', stopScroll);
-      
-    });
+    }, 3000);
+    gallery.addEventListener('touchstart', stopScroll);
+    gallery.addEventListener('mouseover', stopScroll);
 
   }
 }
@@ -124,7 +133,7 @@ export default {
 }
 
 #gallery-scroller {
-  width: 5700px;
+  width: 6000px;
 }
 
 #gallery-scroller img {
@@ -161,11 +170,7 @@ h1, h2 {
 }
 
 .video-container iframe {
-    /*position: absolute;*/
-    /*top:0;*/
-    /*left: 0;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
+    
 }
 
 .video-container {

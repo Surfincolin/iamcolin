@@ -1,5 +1,18 @@
 [
 	{
+		"title": "BCI Research",
+		"description": "Multiple projects revolving around the classification of event related potentials.",
+		"client": "UC San Diego and Self",
+		"role": "Built, recorded, and processed brain activity with electroencephalography.",
+		"tools": ["Python"],
+		"thumbnail": "BCI",
+		"photos": ["bci-1", "bci-2", "bci-3", "bci-4", "bci-5", "bci-6"],
+		"video": "",
+		"videoType": "vimeo",
+		"projectId": "bci",
+		"intro": "A psychedelic Apple TV app that visualizes phrases."
+	},
+	{
 		"title": "Eventide",
 		"description": "Change a would be eye soar of a parking garage into a eye catching digital art piece. Using a combination of C++ applications and web applications we built a system that allowed the county to easily display and manipulate content on an array of over 800 lights.",
 		"client": "County of San Diego",
@@ -115,6 +128,19 @@
 		"videoType": "vimeo",
 		"projectId": "behavioral-health-visualization",
 		"intro": "Web based interactive dataviz application."
+	},
+	{
+		"title": "Pet Toaster",
+		"description": "A toaster that glows, purrs, shakes, hops, and clucks like a chicken!",
+		"client": "personal",
+		"role": "Ideation, fabrication, and embedded system programming.",
+		"tools": ["Arduino", "C++", "Solenoid", "Motion Sensor", "DC Motor", "LEDs", "Gyroscope", "toaster"],
+		"thumbnail": "Toaster",
+		"photos": ["toaster-1", "toaster-2", "toaster-3", "toaster-4"],
+		"video": "",
+		"videoType": "vimeo",
+		"projectId": "toaster",
+		"intro": "Your best friend."
 	},
 	{
 		"title": "Life",

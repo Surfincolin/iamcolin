@@ -37,7 +37,6 @@
             </ul>
           </div>
         </div>
-        <h5 class="footnote">&#169 2018 Colin Wageman. <br class="mobile"/>All rights reserved.</h5>
       </div>
     </div>
   </div>
