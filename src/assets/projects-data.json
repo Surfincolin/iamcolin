@@ -2,15 +2,15 @@
 	{
 		"title": "BCI Research",
 		"description": "Multiple projects revolving around the classification of event related potentials.",
-		"client": "UC San Diego and Self",
-		"role": "Built, recorded, and processed brain activity with electroencephalography.",
+		"client": "UC San Diego and Personal",
+		"role": "Built, recorded, and processed brain activity recorded with electroencephalography.",
 		"tools": ["Python"],
 		"thumbnail": "BCI",
 		"photos": ["bci-1", "bci-2", "bci-3", "bci-4", "bci-5", "bci-6"],
 		"video": "",
 		"videoType": "vimeo",
 		"projectId": "bci",
-		"intro": "A psychedelic Apple TV app that visualizes phrases."
+		"intro": "OpenBCI Cyton based P300 Speller and more."
 	},
 	{
 		"title": "Eventide",
