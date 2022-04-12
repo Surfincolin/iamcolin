@@ -164,7 +164,7 @@ h3 {
   -moz-columns: 100px 3; /* Firefox */
   columns: 100px 3;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   padding-bottom: 1rem;
   line-height: 2rem;
   font-weight: lighter;
