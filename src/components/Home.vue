@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <h2>Welcome! I'm Colin Wageman and I am a software developer specializing in interactive experiences, embedded systems, signal processing, and using data for more than marketing. With a diverse background, I can look at the bigger picture and determining the most efficient approach to projects and problems. I also enjoy getting into the nitty-gritty, even down to how circuits are built.</h2>
+    <h3>Welcome!</h3>
+    <p>I'm Colin Wageman and I am a software developer specializing in interactive experiences, embedded systems, signal processing, and data usage for applications beyond marketing. With a diverse background, I can look at the big picture and determine the most efficient approach to projects and problems. With my skill set, I can also focus on minute details down to the circuit level.</p>
 
     <div id='gallery'>
       <div id='gallery-scroller' data-current="0">
@@ -149,6 +150,11 @@ h1, h2 {
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 0.4px;
   font-size: 1.9rem;
+  text-align: left;
+}
+
+h3 {
+  text-align: left;
 }
 
 .capabilities {
