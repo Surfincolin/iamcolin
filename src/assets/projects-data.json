@@ -1,10 +1,10 @@
 [
 	{
 		"title": "BCI Research",
-		"description": "Multiple projects revolving around the classification of event related potentials.",
+		"description": "Recordings were made on the OpenBCI Cyton board which records the micro voltage from electrode place on the scalp. These voltage changes can be used to classify different mental state with the help of machine learning. I studied filtering via signal processing, artifact removal via independent component analysis, and target non-target difference via P300 response. Using these methods I was able to build a P330 speller which would allow a person to spell words and make sentences by mentally acknowledging when the letter they want is highlighted on screen.",
 		"client": "UC San Diego and Personal",
-		"role": "Built, recorded, and processed brain activity recorded with electroencephalography.",
-		"tools": ["Python"],
+		"role": "Built, recorded, and processed brain activity recordings.",
+		"tools": ["Python", "numpy", "OpenBCI"],
 		"thumbnail": "BCI",
 		"photos": ["bci-1", "bci-2", "bci-3", "bci-4", "bci-5", "bci-6"],
 		"video": "",
@@ -131,20 +131,20 @@
 	},
 	{
 		"title": "Pet Toaster",
-		"description": "A toaster that glows, purrs, shakes, hops, and clucks like a chicken!",
+		"description": "Toasty was a fun project for an exhibit organized by Code Kitchen and myself. With limited time, I disassembled a toaster and added some components to gift a new life. LEDs were added to give the toaster its usual glow without burning someone. A weighted motor and large solenoid were added to give the toaster movement. A small speaker was added so the toaster could make sounds. Finally, a gyroscope and motion sensor were used to detect when someone was standing over the toaster or had picked up the toaster. Toasty glows, purrs, shakes, hops, and clucks like a chicken!",
 		"client": "personal",
 		"role": "Ideation, fabrication, and embedded system programming.",
-		"tools": ["Arduino", "C++", "Solenoid", "Motion Sensor", "DC Motor", "LEDs", "Gyroscope", "toaster"],
+		"tools": ["Arduino", "C++", "Solenoid", "Motion Sensor", "DC Motor", "LEDs", "Gyroscope", "LM386", "transistors", "toaster"],
 		"thumbnail": "Toaster",
 		"photos": ["toaster-1", "toaster-2", "toaster-3", "toaster-4"],
 		"video": "",
 		"videoType": "vimeo",
 		"projectId": "toaster",
-		"intro": "Your best friend."
+		"intro": "Your new best friend."
 	},
 	{
 		"title": "Life",
-		"description": "Enjoying life!",
+		"description": "I obviously don't always sit at a computer. In my spare time I like to bike, climb, and build things with my hands. There was a recent addition to my family and I spend most of my time crawling around with him!",
 		"client": "My family and I",
 		"role": "Dad, Husband, Brother, Son, Climber, Cyclist",
 		"tools": ["Coffee", "Bread", "Beer"],
