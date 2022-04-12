@@ -52,19 +52,6 @@
 		"intro": "Over 800 lights synchronized for programmable playback."
 	},
 	{
-		"title": "Convergence",
-		"description": "Our goal was to create an interactive artistic interpretation of the Cabrillo National Monument and the natural landscape around it. Using an old television piece, we modulated classic surf music to be unrecognizable when interaction wasn't happening.  As viewers approached, the music would become more and more recognizable.",
-		"client": "personal",
-		"role": "Ideation, fabrication, and sound manipulation programming.",
-		"tools": ["Pure-data", "Raspberry Pi", "Arduino", "Sonar distance sensor"],
-		"thumbnail": "Converge",
-		"photos": ["converge-2", "converge-3", "converge-4", "converge-1"],
-		"video": "",
-		"videoType": "vimeo",
-		"projectId": "convergence",
-		"intro": "Proximity sensing period jukebox."
-	},
-	{
 		"title": "Innovation Clock",
 		"description": "Our task was to create a visual monolith located in a building lobby. The monolith gathers social media data and interprets that data to display relevant messaging for people to see as they come and go from the building. The social media data is also used to generate artistic patterns on the lower resolution back of the monolith, as well as decorative facade lighting on the exterior of the building.",
 		"client": "Biomed Reality",
@@ -78,17 +65,30 @@
 		"intro": "Cinder based lobby and building display."
 	},
 	{
-		"title": "Inflorescent Crescendo",
-		"description": "The goal was to combine technology with nature to make an immersive experience. We used frequency sweeping capacitive touch using the plants as a controller for a generative musical experience that was driven by Pure-Data and Ableton Live. Basically you touch the plants and they make music.",
+		"title": "Convergence",
+		"description": "Our goal was to create an interactive artistic interpretation of the Cabrillo National Monument and the natural landscape around it. Using an old television piece, we modulated classic surf music to be unrecognizable when interaction wasn't happening.  As viewers approached, the music would become more and more recognizable.",
 		"client": "personal",
-		"role": "Ideation, Capacitive touch circuit fabrication and software.",
-		"tools": ["Arduino", "Processing", "Pure-Data", "Ableton Live"],
-		"thumbnail": "IC",
-		"photos": ["IC-3", "IC-1", "IC-2"],
+		"role": "Ideation, fabrication, and sound manipulation programming.",
+		"tools": ["Pure-data", "Raspberry Pi", "Arduino", "Sonar distance sensor"],
+		"thumbnail": "Converge",
+		"photos": ["converge-2", "converge-3", "converge-4", "converge-1"],
 		"video": "",
 		"videoType": "vimeo",
-		"projectId": "inflorescent-crescendo",
-		"intro": "Plants that react to touch and playback music."
+		"projectId": "convergence",
+		"intro": "Proximity sensing period jukebox."
+	},
+	{
+		"title": "Miraj",
+		"description": "We created a tvOS application that creates a psychedelic kaleidoscope/mandala-like visualization based off of phrases spoken into the Siri remote.",
+		"client": "Sosolimited",
+		"role": "Created an image gathering server that serves the tvOS application. Built the swift UI for the application. Early visualization prototyping and ideation.",
+		"tools": ["C++", "Cinder", "Swift", "tvOS", "Node.js", "MongoDb"],
+		"thumbnail": "Miraj",
+		"photos": ["Miraj-6", "Miraj-5", "Miraj-2", "Miraj-1", "Miraj-4", "Miraj-3"],
+		"video": "https://player.vimeo.com/video/173960811",
+		"videoType": "vimeo",
+		"projectId": "miraj",
+		"intro": "A psychedelic Apple TV app that visualizes phrases."
 	},
 	{
 		"title": "Jabil BlueSky Center",
@@ -104,17 +104,17 @@
 		"intro": "16 display curved touch wall."
 	},
 	{
-		"title": "Miraj",
-		"description": "We created a tvOS application that creates a psychedelic kaleidoscope/mandala-like visualization based off of phrases spoken into the Siri remote.",
-		"client": "Sosolimited",
-		"role": "Created an image gathering server that serves the tvOS application. Built the swift UI for the application. Early visualization prototyping and ideation.",
-		"tools": ["C++", "Cinder", "Swift", "tvOS", "Node.js", "MongoDb"],
-		"thumbnail": "Miraj",
-		"photos": ["Miraj-6", "Miraj-5", "Miraj-2", "Miraj-1", "Miraj-4", "Miraj-3"],
-		"video": "https://player.vimeo.com/video/173960811",
+		"title": "Inflorescent Crescendo",
+		"description": "The goal was to combine technology with nature to make an immersive experience. We used frequency sweeping capacitive touch using the plants as a controller for a generative musical experience that was driven by Pure-Data and Ableton Live. Basically you touch the plants and they make music.",
+		"client": "personal",
+		"role": "Ideation, Capacitive touch circuit fabrication and software.",
+		"tools": ["Arduino", "Processing", "Pure-Data", "Ableton Live"],
+		"thumbnail": "IC",
+		"photos": ["IC-3", "IC-1", "IC-2"],
+		"video": "",
 		"videoType": "vimeo",
-		"projectId": "miraj",
-		"intro": "A psychedelic Apple TV app that visualizes phrases."
+		"projectId": "inflorescent-crescendo",
+		"intro": "Plants that react to touch and playback music."
 	},
 	{
 		"title": "Who's Got Next",
