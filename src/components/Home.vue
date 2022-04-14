@@ -12,7 +12,7 @@
     </div>
     <div class="standard-content">
       <h3>A Brief History</h3>
-      <p>I started career in video production. As live streaming and webcasts became popular, I started a live streaming company. Over time, I began developing custom servers and content distribution networks through AWS for live broadcasts. I really enjoyed coding and application development, so I decided to pursue a career in software development. From there I worked with Sosolimited, a design and technology firm, as a creative coder. I also worked as a software developer for the agency MJD Interactive. I wanted to expand my knowledge further so I went back to school at UC San Diego and studied cognition, data science, machine learning, and brain computer interfaces.</p>
+      <p>I started my career in video production. As live streaming and webcasts became popular, I started a live streaming company. Over time, I began developing custom servers and content distribution networks through AWS for live broadcasts. I really enjoyed coding and application development, so I decided to pursue a career in software development. From there I worked with Sosolimited, a design and technology firm, as a creative coder. I also worked as a software developer for the agency MJD Interactive. I wanted to expand my knowledge further so I went back to school at UC San Diego and studied cognition, data science, machine learning, and brain computer interfaces.</p>
       <h3 class="">Capabilities</h3>
       <ul class="capabilities">
         <li>After Effects</li>
