@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h3>Welcome!</h3>
-    <p>I'm Colin Wageman and I am a software developer specializing in interactive experiences, embedded systems, signal processing, and data usage for applications beyond marketing. With a diverse background, I can look at the big picture and determine the most efficient approach to projects and problems. With my skill set, I can also focus on minute details down to the circuit level.</p>
+    <p>I'm Colin Wageman and I am a software developer specializing in interactive experiences, embedded systems, signal processing, and data usage for applications beyond marketing. With my diverse background, I can look at the big picture and determine the most efficient approach to projects and problems. With my skill set, I can also focus on minute details down to the circuit level. This site is built to showcase some of the projects I have worked on. Take a look around!</p>
 
     <div id='gallery'>
       <div id='gallery-scroller' data-current="0">
