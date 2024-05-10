@@ -1,0 +1,120 @@
+---
+import Main from "../layouts/Main.astro";
+import ConnectVue from "../components/Connect.vue";
+import App from "../components/App.vue";
+---
+
+<Main>
+    <main>
+        <App activeLink={"/Connect"}>
+            <ConnectVue />
+        </App>
+    </main>
+</Main>
+
+<script>
+    /// --------------------------
+    ///         p5.js Code
+    /// --------------------------
+    interface Point {
+        xPos: number;
+        yPos: number;
+    }
+
+    function startSketch() {
+        // p is a p5js instance
+        const sketch = function (p: any) {
+            const fCParent = document.getElementById("funCanvas");
+            if (!fCParent) {
+                console.log("No canvas parent element found.");
+                return;
+            }
+            const wide = fCParent.offsetWidth;
+            const high = fCParent.offsetHeight - 4; // div border compensation
+
+            const buffer = 0.2;
+            const start = 0.1;
+            const finish = 0.6;
+            const speed = 1.5;
+            const dotWidth = 10;
+
+            const createPoint: () => Point = function () {
+                return {
+                    xPos: Math.random() * (wide - 2 * dotWidth) + dotWidth,
+                    yPos: -high * buffer + Math.random() * -50,
+                };
+            };
+
+            const pointArray: Point[] = [];
+
+            p.setup = function () {
+                const funCanvas = p.createCanvas(wide, high);
+                funCanvas.parent(fCParent);
+
+                pointArray.push(createPoint());
+            };
+
+            p.draw = function () {
+                p.clear();
+
+                if (pointArray[0].yPos > high + 150) {
+                    pointArray.shift();
+                }
+
+                if (pointArray[pointArray.length - 1].yPos >= -high * 0.1) {
+                    pointArray.push(createPoint());
+                }
+
+                pointArray.forEach(function (point, index) {
+                    p.fill(255);
+                    p.stroke(255);
+                    p.strokeWeight(2);
+
+                    if (index + 1 != pointArray.length) {
+                        p.line(
+                            point.xPos,
+                            point.yPos,
+                            pointArray[index + 1].xPos,
+                            pointArray[index + 1].yPos,
+                        );
+                    }
+
+                    if (pointArray[index + 2] != undefined) {
+                        // draw second line
+                        let percent = 0;
+                        if (point.yPos >= high * finish) {
+                            percent = 1;
+                        } else if (point.yPos >= high * start) {
+                            const pPos = point.yPos - high * start;
+                            const fPos = high * finish - high * start;
+                            percent = pPos / fPos;
+                        }
+
+                        const disX =
+                            (pointArray[index + 2].xPos - point.xPos) * percent;
+                        const disY =
+                            (pointArray[index + 2].yPos - point.yPos) * percent;
+
+                        p.line(
+                            point.xPos,
+                            point.yPos,
+                            point.xPos + disX,
+                            point.yPos + disY,
+                        );
+                    }
+
+                    p.fill(150, 197, 88);
+                    p.stroke(150, 197, 88);
+                    p.ellipse(point.xPos, point.yPos, dotWidth, dotWidth);
+
+                    point.yPos += speed;
+                });
+            };
+        };
+        // @ts-ignore
+        const myp5 = new p5(sketch);
+    }
+
+    // Start p5.js Sketch
+    startSketch();
+</script>

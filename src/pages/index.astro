@@ -1,0 +1,64 @@
+---
+import Main from "../layouts/Main.astro";
+import Home from "../components/Home.vue";
+import App from "../components/App.vue";
+---
+
+<Main>
+  <main>
+    <App activeLink={"/"}>
+      <Home />
+    </App>
+  </main>
+</Main>
+
+<script>
+  const animateGallery = () => {
+    const galleryEl = document.getElementById("gallery");
+    const scr = document.getElementById("gallery-scroller");
+
+    if (!galleryEl || !scr) {
+      console.log('No gallery element found to animate.')
+      return
+   
+    } else {
+
+      const end = scr.scrollWidth - galleryEl.offsetWidth;
+      let scrollTimer: number;
+      let stopTimer: number;
+  
+      const galleryScroll = (amount = 1) => {
+        let delay = 8; //ms
+        if (galleryEl.scrollLeft == end) {
+          amount = -1;
+          delay = 3000; // hold at end for 3 sec
+        } else if (galleryEl.scrollLeft == 0) {
+          amount = 1;
+          delay = 3000; // hold at end for 3 sec
+        }
+        galleryEl.scrollBy(amount, 0);
+        scrollTimer = setTimeout(() => {
+          galleryScroll(amount);
+        }, delay);
+      }
+  
+      function stopScroll() {
+        clearTimeout(stopTimer);
+        clearTimeout(scrollTimer);
+        stopTimer = setTimeout(galleryScroll, 3000);
+      }
+  
+      // fixed bug where initial delay happened twice
+      scrollTimer = setTimeout(() => {
+        galleryEl.scrollBy(2, 0);
+        galleryScroll();
+      }, 3000);
+      galleryEl.addEventListener("touchstart", stopScroll);
+      galleryEl.addEventListener("mouseover", stopScroll);
+    }
+    
+  }
+
+  animateGallery()
+</script>
+<style></style>

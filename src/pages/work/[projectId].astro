@@ -1,0 +1,20 @@
+---
+import Main from "../../layouts/Main.astro";
+import App from "../../components/App.vue";
+import Project from "../../components/Project.vue";
+import { astroRoutes } from "../../utils/projectData";
+
+export function getStaticPaths() {
+  return astroRoutes;
+}
+
+const { projectId } = Astro.params;
+---
+
+<Main>
+  <main>
+    <App activeLink={"/work/"+projectId}>
+      <Project projectId={projectId} />
+    </App>
+  </main>
+</Main>
