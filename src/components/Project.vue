@@ -1,3 +1,44 @@
+<script setup>
+import { getProjectById } from "../utils/projectData"
+
+const { projectId } = defineProps(['projectId'])
+
+const project = getProjectById(projectId)
+
+const videoSrc = () => project.video + "?title=0&byline=0&portrait=0"
+
+const importGlob = import.meta.glob("../../static/images/projects/*");
+const projectPhotoDir = "../../static/images/projects/"
+const jpgSuffix = "@0,5x.jpg"
+
+
+const imagesMap = new Map()
+for (const [file, importCall] of Object.entries(importGlob)) {
+    if (file.endsWith(jpgSuffix)) {
+        const module = await importCall()
+        imagesMap.set(file, module.default)
+    }
+}
+
+const imageUrl = (name) => {
+    const fileName = `${projectPhotoDir}${name}${jpgSuffix}`
+    return imagesMap.get(fileName).src
+}
+  	// currentImage: function(index) {
+  	// 	var imgName = this.project.photos[index]
+  	// 	// return "/static/images/projects/" + imgName + "@0,5x.jpg";
+  	// 	return "/static/images/projects/" + imgName + "-full.jpg";
+  	// },
+  	// nextSlide: function() {
+  	// 	this.slideIndex += 1
+  	// },
+  	// prevSlide: function() {
+  	// 	this.slideIndex -= 1
+  	// },
+  	
+
+</script>
+
 <template>
   <div class="project">
   	<h3>{{ project.title }}</h3>
@@ -32,43 +73,6 @@
   </div>
 </template>
 
-<script>
-import projects from '../assets/projects-data.json'
-
-export default {
-  name: 'project',
-  data () {
-  	var pId = this.$route.params.projectId
-
-
-    return {
-      project: projects.find((element) => { return element.projectId === pId }),
-      slideIndex: 0
-    }
-  },
-  methods: {
-  	imageUrl: function(name) {
-  		return "/static/images/projects/" + name + "@0,5x.jpg";
-  		// return "/static/images/projects/" + name + "-full.jpg";
-  	},
-  	currentImage: function(index) {
-  		var imgName = this.project.photos[index]
-  		// return "/static/images/projects/" + imgName + "@0,5x.jpg";
-  		return "/static/images/projects/" + imgName + "-full.jpg";
-  	},
-  	nextSlide: function() {
-  		this.slideIndex += 1
-  	},
-  	prevSlide: function() {
-  		this.slideIndex -= 1
-  	},
-  	videoSrc: function() {
-  		return this.project.video + "?title=0&byline=0&portrait=0";
-  	}
-  }
-}
-</script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
@@ -90,12 +94,6 @@ export default {
 }
 
 .slide-container, .photo-grid {
-	/*position: relative;*/
-	/*padding-top: 1rem;*/
-	/*width: 90%;*/
-	/*min-height: 480px;*/
-	/*overflow: hidden;*/
-	/*margin: 0 auto;*/
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -105,22 +103,10 @@ export default {
 	width: calc(50% - 8px);
 	margin-bottom: 8px;
 	line-height: 0;
-	/*display: inline-block;*/
-	/*padding-right: 1rem;*/
 }
 
 .slide-container img, .photo-container img {
-	/*position: absolute;*/
-	/*left: 50%;*/
-	/*top: 50%;*/
-	/*height: auto;*/
 	width: 100%;
-	/*padding-right: 1rem;*/
-	/*padding-bottom: 1rem;*/
-	/*-webkit-transform: translate(-50%,-50%);*/
-      /*-ms-transform: translate(-50%,-50%);*/
-          /*transform: translate(-50%,-50%);*/
-  /*display: inline-block;*/
 }
 
 h3 {
@@ -137,8 +123,6 @@ h3 {
 
 .role .bolder, .role h5 {
   font-size: 1.2rem;
-  /*font-weight: bold;*/
-  /*font-family: 'Cormorant Garamond', serif;*/
 }
 
 .small-bottom-padding {

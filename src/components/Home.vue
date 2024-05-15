@@ -1,13 +1,48 @@
+<script setup>
+const imgBase = '../../static/images/gallery/'
+const suffix = '@0.5x.jpg'
+const gallery = [
+        {imgFile: 'BHZ-2', projectId: 'behavioral-health-visualization'}, 
+        {imgFile: 'bci-1', projectId: 'bci'}, 
+        {imgFile: 'converge-1', projectId: 'convergence'}, 
+        {imgFile: 'biomed-2', projectId: 'biomed-reality'}, 
+        {imgFile: 'toaster-3', projectId: 'toaster'}, 
+        {imgFile: 'bci-2', projectId: 'bci'}, 
+        {imgFile: 'Eventide-2', projectId: 'eventide'}, 
+        {imgFile: 'converge-4', projectId: 'convergence'}, 
+        {imgFile: 'bci-3', projectId: 'bci'}, 
+        {imgFile: 'toaster-1', projectId: 'toaster'}, 
+        {imgFile: 'life-1', projectId: 'life'}, 
+        {imgFile: 'IC-1',  projectId: 'inflorescent-crescendo'}, 
+        {imgFile: 'Jabil-5', projectId: 'jabil-bluesky-center'}, 
+        {imgFile: 'life-2', projectId: 'life'}, 
+        {imgFile: 'Miraj-5', projectId: 'miraj'}, 
+        {imgFile: 'life-3', projectId: 'life'}, 
+        {imgFile: 'toaster-2', projectId: 'toaster'}, 
+        {imgFile: 'qronicles-2', projectId: 'qronicles'}, 
+        {imgFile: 'bci-4', projectId: 'bci'}, 
+        {imgFile: 'WGN-4', projectId: 'whos-got-next'}, 
+      ]
+
+const getFullFileName = (picture) => `${imgBase}${picture.imgFile}${suffix}`
+
+const importGlob = import.meta.glob("../../static/images/gallery/*");
+for (const picture of gallery) {
+  picture.imgMeta = await importGlob[getFullFileName(picture)]()
+}
+
+</script>
+
 <template>
   <div class="home">
     <h3>Welcome!</h3>
     <p>I'm Colin Wageman and I am a software developer specializing in interactive experiences, embedded systems, signal processing, and data usage for applications beyond marketing. With my diverse background, I can look at the big picture and determine the most efficient approach to projects and problems. With my skill set, I can also focus on minute details down to the circuit level. This site is built to showcase some of the projects I have worked on. Take a look around!</p>
 
     <div id='gallery'>
-      <div id='gallery-scroller' data-current="0">
-        <router-link v-for="photo in gallery" :key="photo.imgFile" :to="{ name: 'Project', params: { projectId: photo.projectId }}" >
-          <img :src="imgBase + photo.imgFile + suffix">
-        </router-link>
+      <div id='gallery-scroller'>
+        <a v-for="photo in gallery" :key="photo.imgFile" :href="`/work/${photo.projectId}`" >
+          <img :src="photo.imgMeta.default.src" :alt="photo.imgFile">
+        </a>
       </div>
     </div>
     <div class="standard-content">
@@ -48,84 +83,10 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'home',
-  data () {
-    return {
-      imgBase: '/static/images/gallery/',
-      suffix: '@0.5x.jpg',
-      gallery: [
-        {imgFile: 'BHZ-2', projectId: 'behavioral-health-visualization'}, 
-        {imgFile: 'bci-1', projectId: 'bci'}, 
-        {imgFile: 'converge-1', projectId: 'convergence'}, 
-        {imgFile: 'biomed-2', projectId: 'biomed-reality'}, 
-        {imgFile: 'toaster-3', projectId: 'toaster'}, 
-        {imgFile: 'bci-2', projectId: 'bci'}, 
-        {imgFile: 'Eventide-2', projectId: 'eventide'}, 
-        {imgFile: 'converge-4', projectId: 'convergence'}, 
-        {imgFile: 'bci-3', projectId: 'bci'}, 
-        {imgFile: 'toaster-1', projectId: 'toaster'}, 
-        {imgFile: 'life-1', projectId: 'life'}, 
-        {imgFile: 'IC-1',  projectId: 'inflorescent-crescendo'}, 
-        {imgFile: 'Jabil-5', projectId: 'jabil-bluesky-center'}, 
-        {imgFile: 'life-2', projectId: 'life'}, 
-        {imgFile: 'Miraj-5', projectId: 'miraj'}, 
-        {imgFile: 'life-3', projectId: 'life'}, 
-        {imgFile: 'toaster-2', projectId: 'toaster'}, 
-        {imgFile: 'qronicles-2', projectId: 'qronicles'}, 
-        {imgFile: 'bci-4', projectId: 'bci'}, 
-        {imgFile: 'WGN-4', projectId: 'whos-got-next'}, 
-      ]
-    }
-  },
-  mounted: function() {
-    var gallery = document.getElementById('gallery');
-    
-    var scr = document.getElementById('gallery-scroller');
-
-    var end = scr.scrollWidth - gallery.offsetWidth;
-    var scrollTimer;
-    var stopTimer;
-
-    function galleryScroll(amount = 1) {
-      var delay = 8; //ms
-      if (gallery.scrollLeft == end) {
-        amount = -1
-        delay = 3000; // hold at end for 3 sec
-      } else if (gallery.scrollLeft == 0) {
-        amount = 1
-        delay = 3000; // hold at end for 3 sec
-      }
-      gallery.scrollBy(amount,0);
-      scrollTimer = setTimeout(() => { galleryScroll(amount) }, delay);
-    }
-    
-    function stopScroll() {
-      if (stopTimer != undefined) {
-        clearTimeout(stopTimer);
-      }
-      clearTimeout(scrollTimer);
-      stopTimer = setTimeout(galleryScroll, 3000);
-    }
-
-    // fixed bug where initial delay happened twice
-    scrollTimer = setTimeout(() => {
-      gallery.scrollBy(2,0);
-      galleryScroll();
-    }, 3000);
-    gallery.addEventListener('touchstart', stopScroll);
-    gallery.addEventListener('mouseover', stopScroll);
-
-  }
-}
-</script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 #gallery {
-  /*border: 1px solid #000000;*/
   max-width: 100%;
   max-height: 300px;
   overflow-x: auto;
@@ -138,7 +99,7 @@ export default {
 }
 
 #gallery-scroller img {
-  display: inline-block; 
+  /* display: inline-block;  */
   float: left;
   width: 300px;
 }
@@ -175,10 +136,6 @@ h3 {
   padding-top: 2rem;
 }
 
-.video-container iframe {
-    
-}
-
 .video-container {
   position: relative;
   max-width: 854px;
@@ -204,16 +161,6 @@ h3 {
   height: 100%;
 }
 
-/*ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}*/
-
 a {
   color: #42b983;
 }
@@ -228,8 +175,6 @@ a {
     }
 
     .capabilities {
-      /*list-style-type: circle;*/
-      /*list-style-position: inside;*/
       -webkit-columns: 100px 2; /* Chrome, Safari, Opera */
       -moz-columns: 100px 2; /* Firefox */
       columns: 100px 2;

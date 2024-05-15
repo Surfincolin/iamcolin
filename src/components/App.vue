@@ -1,56 +1,21 @@
+<script setup>
+import Header from "./Header.vue";
+import Footer from "./Footer.vue";
+
+const { activeLink } = defineProps(['activeLink'])
+</script>
+
 <template>
   <div id="app">
     <div class="master-container almost-white-fg">
-      <div class="header-container">
-        <div class="logo-container">
-          <!-- <img src="./fullname-grey.png" alt="Colin Wageman"> -->
-          <router-link :to="{ name: 'Home'}">
-            <img class="logo" src="./assets/logo-white.svg" alt="Colin Wageman">
-          </router-link>
-        </div>
-        <div class="menu almost-white-fg">
-          <ul>
-            <li><router-link :to="{ name: 'Home'}">About</router-link></li>
-            <li><router-link :to="{ name: 'Work'}">Work</router-link></li>
-            <li><router-link :to="{ name: 'Connect'}">Connect</router-link></li>
-          </ul>
-        </div>
-      </div>
-      <hr>
+      <Header :activeLink="activeLink" />
       <div class="content-container">
-        <router-view></router-view>
+        <slot />
       </div>
-      <hr>
-      <div class="footer-container">
-        <div class="footer-menu almost-white-fg">
-          <div class="fm-column">
-            <ul>
-              <li><router-link :to="{ name: 'About'}">About</router-link></li>
-              <li><router-link :to="{ name: 'Work'}">Work</router-link></li>
-              <li><router-link :to="{ name: 'Connect'}">Connect</router-link></li>
-            </ul>
-          </div>
-          <div class="fm-column">
-            <ul>
-              <li><a href="https://www.linkedin.com/in/colin-wageman/" target="_blank">Linkedin</a></li>
-              <li><a href="mailto:colinwageman@gmail.com?subject=Hey Colin lets connect!" target="_blank">Email</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <Footer :activeLink="activeLink" />
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'app',
-  created () {
-    // console.log('created fired')
-    // document.title = 'this is a test'
-  }
-}
-</script>
 
 <style>
 /*#app {
@@ -170,7 +135,7 @@ a {
   background-color: #e0a216;
 }
 
-.router-link-exact-active {
+.router-link-exact-active, .active-link {
   color: #96C558
   /*color: #e0a216; */
 }
@@ -315,10 +280,6 @@ hr {
 
     .mobile {
       display: inline;
-    }
-
-    .master-container {
-      /*max-width: 80rem;*/
     }
 
     .header-container {
