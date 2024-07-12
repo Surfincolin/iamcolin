@@ -1,5 +1,5 @@
 <script setup>
-import logoWhite from "../assets/logo-white.svg";
+import logoWhite from "../assets/cw-logo-white.svg";
 
 const { activeLink } = defineProps(['activeLink'])
 </script>

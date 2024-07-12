@@ -104,11 +104,13 @@ h1, h2 {
 }
 
 h3 {
+    font-weight: 500;
     text-align: left;
 }
 
 .bold {
-    font-weight: bold;
+    font-weight: 500;
+    /* font-weight: bold; */
 }
 
 .skills {

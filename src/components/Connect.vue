@@ -4,7 +4,7 @@
   	<div class="connect-container">
   		<div>
 		  	<p>Think I can help out on your next project? Great, shoot me an email with the link below. I am currently based out of San Diego but happy to work with remote teams.</p>
-		  	<a href="mailto:colinwageman@gmail.com?subject=Hey Colin lets connect!" target="_blank">Email Me Here</a>
+		  	<a href="mailto:colinwageman@gmail.com?subject=Looking for help" target="_blank">colinwageman@gmail.com</a>
 	  	</div>
 	  	<div>
 	  		<div id="funCanvas"></div>

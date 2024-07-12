@@ -77,7 +77,8 @@ const getPreviewImage = (name) => {
 
 .project-card-info {
     padding: 1.5rem;
-    background-color: rgb(74, 80, 87);
+    /* background-color: rgb(74, 80, 87); */
+    background-color: rgb(49, 54, 60);
     -webkit-box-shadow: 1px 7px 20px 2px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 7px 20px 2px rgba(0,0,0,0.75);
     box-shadow: 1px 7px 20px 2px rgba(0,0,0,0.75);
@@ -135,6 +136,19 @@ const getPreviewImage = (name) => {
 
 .project-card-info-container.right h2:after {
     margin-right: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    .project-card-info-container {
+        /* padding: 0.5rem; */
+        width: 60%;
+    }
+
+    .project-card h2 {
+        /* font-size: 1.4rem; */
+        /* padding-bottom: 0.5rem; */
+        padding-top: 0rem;
+    }
 }
 
 @media only screen and (max-width: 768px) {

@@ -18,16 +18,6 @@ const { activeLink } = defineProps(['activeLink'])
 </template>
 
 <style>
-/*#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}*/
-
-
 /* RESET */
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -103,6 +93,14 @@ a {
   background-color: #96C558
 }
 
+.bright-blue-fg {
+  color: #4BB6FF
+}
+
+.bright-blue-bg {
+  background-color: #4BB6FF
+}
+
 .light-brown-fg {
   color: #A99489
 }
@@ -136,25 +134,25 @@ a {
 }
 
 .router-link-exact-active, .active-link {
-  color: #96C558
-  /*color: #e0a216; */
+  color: #4BB6FF
 }
 
 
 /* SITE CSS */
 
 body {
-  /*padding: 2rem;*/
-
-    /*font-family: 'Proza Libre', sans-serif;*/
-    font-family: 'Source Sans Pro', sans-serif;
-    /*background-color: #4A5057;*/
-    background-color: #363B40;
+  font-family: 'Source Sans Pro', sans-serif;
+  /* font-family: 'Cormorant Garamond', serif; */
+  /*background-color: #4A5057;*/
+  /* background-color: #363B40; */
+  background-color: #1E2124;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: bold;
+  /* font-family: 'Cormorant Garamond', serif; */
+  font-family: 'Source Sans Pro', sans-serif;
+  /* font-weight: bold; */
+  font-weight: 500;
   text-align: center;
 }
 
@@ -191,7 +189,8 @@ p {
   display: flex;
   padding: 1rem 4rem 0;
   align-items: center;
-  font-family: 'Cormorant Garamond', serif;
+  /* font-family: 'Cormorant Garamond', serif; */
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .logo-container {
@@ -227,7 +226,7 @@ hr {
   border-left: none;
   border-right: none;
   /*border-top: 4px double #4A5057;*/
-  border-top: 4px double #363B40;
+  border-top: 1px single #363B40;
 }
 
 .content-container {
@@ -257,7 +256,8 @@ hr {
   text-align: center;
   margin: 0 auto;
   padding-bottom: 2rem;
-  font-family: 'Cormorant Garamond', serif;
+  /* font-family: 'Cormorant Garamond', serif; */
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.1rem;
 }
 
@@ -293,7 +293,8 @@ hr {
       display: flex;
       padding: 1rem 1rem 0;
       align-items: center;
-      font-family: 'Cormorant Garamond', serif;
+      /* font-family: 'Cormorant Garamond', serif; */
+      font-family: 'Source Sans Pro', sans-serif;
     }
 
     .logo-container {
