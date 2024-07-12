@@ -219,6 +219,10 @@ p {
   font-size: 1.3rem;
 }
 
+.menu li:last-of-type {
+  padding-right: 0;
+}
+
 hr {
   border-left: none;
   border-right: none;
