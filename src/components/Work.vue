@@ -32,7 +32,7 @@ const getPreviewImage = (name) => {
         <div class="project-card" v-for="(project, index) in projects">
             <a :href="`/work/${project.projectId}`" >
                 <div class="project-card-img">
-                    <img :src="getPreviewImage( project.thumbnail ).src" />
+                    <img loading="lazy" :src="getPreviewImage( project.thumbnail ).src" />
                 </div>
                 <div v-if="!(index % 2)" class="project-card-info-container almost-white-fg right">
                     <div class="project-card-info">
@@ -163,7 +163,7 @@ const getPreviewImage = (name) => {
         }
 
         .project-card h2 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             padding-bottom: 0.5rem;
             padding-top: 0;
         }

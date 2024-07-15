@@ -18,12 +18,11 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.5.10",
-    "@astrojs/vue": "^4.1.0",
-    "astro": "^4.7.0",
-    "sass": "^1.76.0",
-    "typescript": "^5.4.5",
-    "vue": "^3.4.26"
+    "@astrojs/check": "^0.8.1",
+    "@astrojs/vue": "^4.5.0",
+    "astro": "^4.11.5",
+    "typescript": "^5.5.3",
+    "vue": "^3.4.31"
   },
   "engines": {
     "node": ">= 21.6.2",

@@ -1,18 +1,20 @@
-<script setup>
+<script setup lang="ts">
 import Header from "./Header.vue";
 import Footer from "./Footer.vue";
 
 const { activeLink } = defineProps(['activeLink'])
+// import { ref } from 'vue'
+// const activeLink = ref(true)
 </script>
 
 <template>
   <div id="app">
     <div class="master-container almost-white-fg">
-      <Header :activeLink="activeLink" />
+      <Header :activeLink="activeLink"></Header>
       <div class="content-container">
-        <slot />
+        <slot></slot>
       </div>
-      <Footer :activeLink="activeLink" />
+      <Footer :activeLink="activeLink"></Footer>
     </div>
   </div>
 </template>

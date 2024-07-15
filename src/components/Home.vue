@@ -52,13 +52,13 @@ for (const picture of gallery) {
             <h3 class="">Professional Skills</h3>
             <ul class="skills">
             <li>
-                <span class="bold">Programming Languages & Frameworks:</span> Python, JavaScript, C++, Java, Swift, React.js, Vue.js, Nuxt, Node.js, Cinder, OpenFrameworks, HTML, CSS
+                <span class="bold">Programming Languages & Frameworks:</span> Python, JavaScript, C++, Java, Swift, React.js, Vue.js, Nuxt, Node.js, TypeScript, Cinder, OpenFrameworks, HTML, CSS
             </li>
             <li>
                 <span class="bold">Machine Learning & Data Science:</span> Data Analysis, NLP, Signal Processing, TensorFlow, PyTorch, Scikit-Learn, Numpy, Pandas
             </li>
             <li>
-                <span class="bold">Web & App Development:</span> AWS, MongoDB, MariaDb, SQLite, Git
+                <span class="bold">Web & App Development:</span> AWS, MongoDB, MariaDb(SQL), SQLite, Git
             </li>
             <li>
                 <span class="bold">Media & Design:</span> After Effects, D3.js, OpenGL, Technical Production, tvOS/iOS
