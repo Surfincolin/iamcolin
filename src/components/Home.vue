@@ -36,7 +36,7 @@ for (const picture of gallery) {
 <template>
     <div class="home">
         <h3>Welcome!</h3>
-        <p>I'm Colin Wageman, a versatile software engineer with a robust background in interactive art, data science, and full-stack development. I specialize in developing sophisticated machine learning models and data-driven applications that enhance user experiences and solve complex problems in various domains, including healthcare and digital media. My journey through video production, webcasting, interactive design, and cognitive science has equipped me with a unique perspective and a diverse skill set that I bring to every project. Explore my portfolio to see the innovative solutions I've crafted.</p>
+        <p>I'm Colin Wageman, a versatile software engineer with a robust background in interactive art, data science, and full-stack development. I specialize in developing sophisticated machine learning models and data-driven applications that enhance user experiences and solve complex problems in various domains, including healthcare and digital media. My journey through video production, webcasting, interactive design, and cognitive science has equipped me with a unique perspective and a diverse skill set that I bring to every project. Explore <a href="/Work">my portfolio</a> to see the innovative solutions I've crafted.</p>
 
         <!-- <div id='gallery'>
             <div id='gallery-scroller'>
@@ -45,6 +45,8 @@ for (const picture of gallery) {
             </a>
             </div>
         </div> -->
+        <div id="gallery"><img src="https://placehold.co/712x150" alt=""></div>
+        <div class="grid-gallery"></div>
         <div class="standard-content">
             <h3>About Me</h3>
             <p>My career began in video production, where I embraced the early days of live streaming and webcasts. This experience led me to launch my own live streaming company, developing custom servers and content distribution networks using AWS for live broadcasts. My passion for coding and application development grew, steering me toward a more technical career path.</p>
@@ -168,7 +170,7 @@ h3 {
 }
 
 a {
-    color: #42b983;
+    color: #4BB6FF;
 }
 
 @media only screen and (max-width: 768px) {
