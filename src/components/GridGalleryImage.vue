@@ -15,7 +15,6 @@ const props = defineProps({
     transY: Number
 })
 
-console.log(props.imgFile)
 const imgUrl = await getImage(props.imgFile)
 const projectId = getProjectId(props.imgFile)
 const projectRoute = `/work/${projectId}`
