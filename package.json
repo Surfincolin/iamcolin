@@ -5,12 +5,6 @@
   "author": "Surfincolin <colinwageman@gmail.com>",
   "private": true,
   "scripts": {
-    "OLDdev": "node build/dev-server.js",
-    "OLDstart": "node build/dev-server.js",
-    "OLDbuild": "node build/build.js",
-    "OLDdeploy": "node build/build.js && aws s3 sync dist s3://colinwageman.com",
-    "OLDdeploy-no-photos": "node build/build.js && aws s3 sync dist s3://colinwageman.com --exclude \"*images/*\"",
-    "OLDlint": "eslint --ext .js,.vue src",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
