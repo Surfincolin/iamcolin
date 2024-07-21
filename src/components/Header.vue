@@ -14,8 +14,8 @@ const { activeLink } = defineProps(['activeLink'])
         <div class="menu almost-white-fg">
           <ul>
             <li><a href="/" :class="{ 'active-link': activeLink === '/'}">About</a></li>
-            <li><a href="/Work" :class="{ 'active-link': activeLink === '/Work'}">Work</a></li>
-            <li><a href="/Connect" :class="{ 'active-link': activeLink === '/Connect'}">Connect</a></li>
+            <li><a href="/work" :class="{ 'active-link': activeLink === '/work'}">Work</a></li>
+            <li><a href="/connect" :class="{ 'active-link': activeLink === '/connect'}">Connect</a></li>
           </ul>
         </div>
       </div>

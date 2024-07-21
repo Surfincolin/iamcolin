@@ -9,14 +9,14 @@ const { activeLink } = defineProps(['activeLink'])
           <div class="fm-column">
             <ul>
               <li><a href="/" :class="{ 'active-link': activeLink === '/'}">About</a></li>
-              <li><a href="/Work" :class="{ 'active-link': activeLink === '/Work'}">Work</a></li>
-              <li><a href="/Connect" :class="{ 'active-link': activeLink === '/Connect'}">Connect</a></li>
+              <li><a href="/work" :class="{ 'active-link': activeLink === '/work'}">Work</a></li>
+              <li><a href="/connect" :class="{ 'active-link': activeLink === '/connect'}">Connect</a></li>
             </ul>
           </div>
           <div class="fm-column">
             <ul>
               <li><a href="https://www.linkedin.com/in/colin-wageman/" target="_blank">Linkedin</a></li>
-              <li><a href="mailto:colinwageman@gmail.com?subject=Hey Colin lets connect!" target="_blank">Email</a></li>
+              <li><a href="mailto:colinwageman@gmail.com?subject=Hello Colin" target="_blank">Email</a></li>
             </ul>
           </div>
         </div>
