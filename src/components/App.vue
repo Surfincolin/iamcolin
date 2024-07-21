@@ -148,6 +148,7 @@ body {
   /*background-color: #4A5057;*/
   /* background-color: #363B40; */
   background-color: #1E2124;
+  --bg-color: #1E2124;
 }
 
 h1, h2, h3, h4, h5 {
