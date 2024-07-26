@@ -51,7 +51,7 @@ const images = [
 <template>
     <div class="home">
         <h3>Welcome!</h3>
-        <p>I'm Colin Wageman, a versatile software engineer with a robust background in interactive art, data science, and full-stack development. I specialize in developing sophisticated machine learning models and data-driven applications that enhance user experiences and solve complex problems in various domains, including healthcare and digital media. My journey through video production, webcasting, interactive design, and cognitive science has equipped me with a unique perspective and a diverse skill set that I bring to every project. Explore <a href="/Work">my portfolio</a> to see the innovative solutions I've crafted.</p>
+        <p>I'm Colin Wageman, a versatile software engineer with a robust background in interactive art, data science, and full-stack development. I specialize in developing sophisticated machine learning models and data-driven applications that enhance user experiences and solve complex problems in various domains, including healthcare and digital media. My journey through video production, webcasting, interactive design, and cognitive science has equipped me with a unique perspective and a diverse skill set that I bring to every project. Explore <a href="/work">my portfolio</a> to see the innovative solutions I've crafted.</p>
 
         <GridGallery :images="images"></GridGallery>
 
